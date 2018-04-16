@@ -1,96 +1,153 @@
-// .card-personal {
-//    width: 100%;
-//    min-height: 300px;
-//    margin-top: 50px;
-//    position: relative;
-// //   font-size: .8em;
+.personal-card {
+  float: left;
+  margin-top: 30px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 80%;
+  flex: 0 1 auto;
+  position: relative;
+  font-size: .8em;
+  // border: 1px solid white;
 
-//   -webkit-perspective: 600px;
-//   perspective: 600px;
-// }
+  -webkit-perspective: 600px;
+          perspective: 600px;
+}
+/* -- make sure to declare a default for every property that you want animated -- */
+/* -- general styles, including Y axis rotation -- */
+.personal-card .front {
+  float: none;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: inherit;
+  height: inherit;
+  background: #010101;
 
-// /* -- make sure to declare a default for every property that you want animated -- */
-// /* -- general styles, including Y axis rotation -- */
+  -webkit-transform: rotateX(0) rotateY(0);
+          transform: rotateX(0) rotateY(0);
 
-// .card-personal .front {
-//   // float: none;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   border-radius: 50px 0px 50px 0;
-//   box-shadow: 5px 5px 5px #624210;
-//   background-color: black;
-//   z-index: 900;
-//   width: inherit;
-//   min-height: inherit;
-//   padding: 0 35px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 
-//   // border: 1px solid #ccc;
-//   // background: #6b7077;
-//   // text-align: center;
-//   // box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 
-//   -webkit-transform: rotateX(0) rotateY(0);
-//           transform: rotateX(0) rotateY(0);
+  /* -- transition is the magic sauce for animation -- */
+  -webkit-transition: all .9s ease-in-out;
+          transition: all .9s ease-in-out;
+}
 
-//   -webkit-transform-style: preserve-3d;
-//           transform-style: preserve-3d;
+.angle-down {
+  color: #FDFDFD;
+  text-decoration: none;
+}
 
-//   -webkit-backface-visibility: hidden;
-//           backface-visibility: hidden;
+.angle-down:link {
+  color: #FDFDFD;
+  text-decoration: none;
+}
 
-//   /* -- transition is the magic sauce for animation -- */
-//   -webkit-transition: all .4s ease-in-out;
-//           transition: all .4s ease-in-out;
-// }
-// .card-personal.flip .front {
-//   z-index: 900;
-//   border-radius: 0px 50px 0px 50px;
-//   // border-color: #eee;
-//   // background: #333;
-//   // box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+.angle-down:visited {
+  color: #FDFDFD;
+  text-decoration: none;
+}
 
-//   -webkit-transform: rotateY(179deg);
-//           transform: rotateY(179deg);
-// }
+.angle-down:hover {
+  color: #FDFDFD;
+  text-decoration: none;
+}
 
-// .card-personal .back {
-//   // float: none;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   z-index: 800;
-//   width: inherit;
-//   min-height: 300px;
-//   border-radius: 50px 0px 50px 0;
-//   // box-shadow: 5px 5px 5px #624210;
-//   background-color: black;
-//   // border: 2px solid;
-//   // border: 1px solid #ccc;
-//   // background: #333;
-//   // text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
-//   padding: 0 35px;
+.angle-down:active {
+  color: #FDFDFD;
+  text-decoration: none;
+}
 
-//   -webkit-transform: rotateY(-179deg);
-//           transform: rotateY(-179deg);
+.front .pad {
+  text-align: center;
+  color: #FDFDFD;
+  margin-top: 25%;
+}
 
-//   -webkit-transform-style: preserve-3d;
-//           transform-style: preserve-3d;
+.back .pad {
+  color: #FDFDFD;
+  margin-top: 20%;
+  margin-left: 15%;
+}
 
-//   -webkit-backface-visibility: hidden;
-//           backface-visibility: hidden;
+.front .pad h1 {
+  font-size: 500%;
+  font-family: "Helvetica", sans-serif;
+}
 
-//   /* -- transition is the magic sauce for animation -- */
-//   -webkit-transition: all .4s ease-in-out;
-//           transition: all .4s ease-in-out;
-// }
+.back .pad h1 {
+  font-size: 500%;
+  font-family: "Roboto", sans-serif;
+}
 
-// .card-personal.flip .back {
-//   z-index: 1000;
-//   // background: #80868d;
+.back .pad h3 {
+  font-size: 250%;
+  font-family: "Roboto", sans-serif;
+}
 
-//   -webkit-transform: rotateX(0) rotateY(0);
-//           transform: rotateX(0) rotateY(0);
+.back .pad h4 {
+  font-size: 170%;
+  font-family: "Roboto", sans-serif;
+  margin-top: 35%;
+  margin-left: 13%;
+}
 
-//   // box-shadow: 0 15px 50px rgba(0,0,0,0.2);
-// }
+.back .pad h5 {
+  margin-left: 40%;
+}
+
+.back .pad p {
+  font-size: 150%;
+  font-family: "Roboto", sans-serif;
+}
+
+.personal-card.flip .front {
+  z-index: 900;
+  border-color: #010101;
+  background: #010101;
+
+  -webkit-transform: rotateY(179deg);
+          transform: rotateY(179deg);
+}
+
+.personal-card .back {
+  float: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 800;
+  width: inherit;
+  height: inherit;
+  background: #010101;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+
+  -webkit-transform: rotateY(-179deg);
+          transform: rotateY(-179deg);
+
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+
+  /* -- transition is the magic sauce for animation -- */
+  -webkit-transition: all .9s ease-in-out;
+          transition: all .9s ease-in-out;
+}
+
+.personal-card.flip .back {
+  z-index: 1000;
+  background: #010101;
+
+  -webkit-transform: rotateX(0) rotateY(0);
+          transform: rotateX(0) rotateY(0);
+
+}
+
+.personal-card.flip .action {display: none; }

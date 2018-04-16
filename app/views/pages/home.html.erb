@@ -1,82 +1,81 @@
-<div class="cont">
-
-  <div class="navbar-personal">
-    <!-- Logo -->
-    <a href="/" class="navbar-personal-brand">
-      <div><i class="fas fa-adjust"></i></div>
-    </a>
-
-    <!-- Right Navigation -->
-    <div class="navbar-personal-right hidden-xs hidden-sm">
-
-      <a href="" class="navbar-personal-item navbar-personal-link">Host</a>
-      <a href="" class="navbar-personal-item navbar-personal-link">Trips</a>
-      <a href="" class="navbar-personal-item navbar-personal-link">Messages</a>
-
-      <!-- Profile picture with dropdown list -->
-      <div class="navbar-personal-item">
-        <div class="dropdown">
-          <%=  image_tag("photo.jpg", class: "avatar dropdown-toggle", id: "navbar-personal-menu", data: { toggle: 'dropdown' } ) %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-personal-dropdown-menu">
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Log Out</a></li>
-          </ul>
+<div class="banner" id="hautpage">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-xs-12">
+        <div class="hover personal-card">
+          <div class="front">
+            <div class="pad">
+              <h1>•</h1>
+            </div>
+          </div>
+          <div class="back">
+            <div class="pad">
+              <h1>Hello,</h1>
+              <h3>
+                I'm <strong>Clément</strong>.
+              </h3>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- Dropdown appearing on mobile only -->
-    <div class="navbar-personal-item hidden-md hidden-lg">
-      <div class="dropdown">
-        <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-        <ul class="dropdown-menu dropdown-menu-right navbar-personal-dropdown-menu">
-          <li><a href="#">Host</a></li>
-          <li><a href="#">Trips</a></li>
-          <li><a href="#">Messagese</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="banner">
-    <div class="banner-content">
-      <div class="card-personal">
-        <div class="front">
-          <p>Hello</p>
+    <div class="row">
+      <div class="col-md-offset-8 col-md-4">
+        <div class="hover personal-card">
+          <div class="front">
+            <div class="pad">
+              <h1>•</h1>
+            </div>
+          </div>
+          <div class="back">
+            <div class="pad">
+              <p>Full-stack Web/App Developer</p>
+              <p>UX/UI Designer</p>
+            </div>
+          </div>
         </div>
-        <!-- <div class="back">
-          <p>Yo</p>
-        </div> -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4">
+        <div class="hover personal-card">
+          <div class="front">
+            <div class="pad">
+              <h1>•</h1>
+            </div>
+          </div>
+          <div class="back">
+            <div class="pad">
+              <h4>Here is my work</h4>
+              <h5><a class="angle-down" href="#ancre"><i class="fas fa-angle-down"></a></i></h5>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
-  <div class="banner2">
-    <div class="banner-content2">
-      <h1>I'm <strong>Clément</strong></h1>
-      <p>Full-stack Web/App Developer</p>
-      <p>UX/UI Designer</p>
-    </div>
-  </div>
-
-  <div class="banner3">
-    <div class="banner-content3">
-    </div>
-  </div>
-
-  <div class="footer">
-    <div class="footer-links">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <div class="footer-copyright">
-      © 2018 Clément Simons
-    </div>
-  </div>
-
 </div>
 
+<div class="banner2" id="ancre">
+  <div class="banner-content2">
+    <h1>I'm <strong>Clément</strong></h1>
+    <p>Full-stack Web/App Developer</p>
+    <p>UX/UI Designer</p>
+  </div>
+</div>
+
+<div class="banner3">
+  <div class="banner-content3">
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    © 2018 Clément Simons
+  </div>
+</div>
