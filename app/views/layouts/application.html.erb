@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <title>Clément Simons - Web Designer</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
@@ -12,6 +13,42 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
+    <div class="navbar-personal">
+      <!-- Logo -->
+      <a href="#hautpage" class="navbar-personal-brand" style="font-size: 150%;">
+        <i class="fas fa-angle-up"></i>
+      </a>
+
+      <!-- Right Navigation -->
+      <div class="navbar-personal-right hidden-xs hidden-sm">
+
+        <a href="" class="navbar-personal-item navbar-personal-link">Say hello!</a>
+
+        <!-- Profile picture with dropdown list -->
+        <div class="navbar-personal-item">
+          <div class="dropdown">
+            <%=  image_tag("photo.jpg", class: "avatar dropdown-toggle", id: "navbar-personal-menu", data: { toggle: 'dropdown' } ) %>
+            <ul class="dropdown-menu dropdown-menu-right navbar-personal-dropdown-menu">
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="#">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dropdown appearing on mobile only -->
+      <div class="navbar-personal-item hidden-md hidden-lg">
+        <div class="dropdown">
+          <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+          <ul class="dropdown-menu dropdown-menu-right navbar-personal-dropdown-menu">
+            <li><a href="#">Host</a></li>
+            <li><a href="#">Trips</a></li>
+            <li><a href="#">Messagese</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
